@@ -4,15 +4,18 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
    <title>Sign-up Form</title>
 </head>
 
 <body>
 
    <div class="background">
-      <img src="Assets/background-red-autumn.jpg" alt="background-red-autumn">
       <div class="logo">
          <img src="Assets/odin-lined.png" alt="odin-lined"><span>ODIN</span>
+      </div>
+      <div class="credit">Photo by <a href="https://unsplash.com/@claude79">Daniel Kim</a> on
+         <a href="https://unsplash.com/photos/shallow-focus-photography-of-red-leafed-tree-1K5FKIyKVxQ">Unsplash</a>
       </div>
    </div>
    <div class="main">
@@ -20,36 +23,40 @@
          together. <br>Sign-up <i>now</i> to get started.</p>
       <p>We <i>believe</i> in you!</p>
 
-      <form action="">
+      <form action="" id="sign-up-form">
          <fieldset>
             <legend>You know you want to!</legend>
             <p>
                <label for="first-name">First name</label>
-               <input type="text" name="first-name" id="first-name" autocomplete="name" size="30" maxlength="245" required>
+               <input type="text" name="first-name" id="first-name" autocomplete="name" maxlength="245"
+                  required>
             </p>
             <p>
                <label for="last-name">Last name</label>
-               <input type="text" name="last-name" id="last-name" autocomplete="family-name" size="30" maxlength="245" required>
+               <input type="text" name="last-name" id="last-name" autocomplete="family-name" maxlength="245"
+                  required>
             </p>
             <p>
                <label for="email">Email</label>
-               <input type="email" name="email" id="email" autocomplete="email" size="30" maxlength="245" required>
+               <input type="email" name="email" id="email" autocomplete="email" maxlength="245" required>
             </p>
             <p>
                <label for="phone">Phone</label>
-               <input type="tel" name="phone" id="phone" autocomplete="tel" size="30" maxlength="245" required>
+               <input type="tel" name="phone" id="phone" autocomplete="tel" maxlength="245" required>
             </p>
             <p>
                <label for="pwd">Password</label>
-               <input type="password" name="pwd" id="pwd" autocomplete="new-password" size="30" maxlength="245" required>
+               <input type="password" name="pwd" id="pwd" autocomplete="new-password" maxlength="245"
+                  required>
             </p>
             <p>
                <label for="pwd-confirmation">Confirm password</label>
-               <input type="password" name="pwd-confirmation" id="pwd-confirmation" autocomplete="new-password" size="30" maxlength="245" required>
+               <input type="password" name="pwd-confirmation" id="pwd-confirmation" autocomplete="new-password"
+                maxlength="245" required>
             </p>
          </fieldset>
-         <button type="submit">Create Acount</button>
       </form>
+      <button type="submit" form="sign-up-form">Create Acount</button>
       <p>Already have an acount? <a href="">Log in</a></p>
    </div>
 
