@@ -73,13 +73,22 @@ h6 {
    font-style: normal;
 }
 
+:root {
+   --text-color-theme: rgb(140, 33, 21);
+   --bg-color-theme-strong: rgb(174, 46, 31);
+   --bg-color-theme-light: rgb(255, 252, 251);
+   --border-color-valid: rgb(30, 114, 204);
+   --label-color-valid: rgb(10, 77, 149);
+}
+
+
 body {
    display: flex;
    background-color: #eee;
 }
 
 .background {
-   width: 35%;
+   width: 40%;
    position: relative;
    background: 0% 0% / cover no-repeat url('Assets/background-red-autumn.jpg');
 
@@ -118,7 +127,7 @@ body {
 }
 
 .main {
-   width: 65%;
+   width: 60%;
    padding: 8em 0;
 
    &>p {
@@ -135,7 +144,7 @@ body {
 
       a {
          text-decoration: none;
-         color: rgb(140, 33, 21);
+         color: var(--text-color-theme);
       }
    }
 }
@@ -179,13 +188,22 @@ form {
             border-radius: 4px;
             border: 1px solid #bbb;
             padding: 2px 8px;
+            background-color: var(--bg-color-theme-light);
 
             &:valid {
-               border-color: rgb(30, 114, 204);
+               border-color: var(--border-color-valid);
+            }
+
+            label:has(+ &:valid) {
+               color: var(--label-color-valid);
             }
 
             &:user-invalid {
-               border-color: rgb(188, 33, 33);
+               border-color: var(--bg-color-theme-strong);
+            }
+
+            label:has(+ &:user-invalid) {
+               color: var(--text-color-theme);
             }
 
             &:focus {
@@ -198,7 +216,7 @@ form {
 }
 
 button {
-   background-color: rgb(174, 46, 31);
+   background-color: var(--bg-color-theme-strong);
    color: white;
    border: none;
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
