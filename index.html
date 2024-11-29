@@ -28,31 +28,35 @@
             <legend>You know you want to!</legend>
             <p>
                <label for="first-name">First name</label>
-               <input type="text" name="first-name" id="first-name" autocomplete="name" maxlength="245"
-                  required>
+               <input placeholder="" type="text" name="first-name" id="first-name" autocomplete="name" pattern="[a-zA-Z]+" maxlength="245" required>
+               <span class="custom-error-message" data-help="Only letters"></span>
             </p>
             <p>
                <label for="last-name">Last name</label>
-               <input type="text" name="last-name" id="last-name" autocomplete="family-name" maxlength="245"
-                  required>
+               <input placeholder="" type="text" name="last-name" id="last-name" autocomplete="family-name" pattern="[a-zA-Z]+" maxlength="245" required>
+               <span class="custom-error-message" data-help="Only letters"></span>
             </p>
             <p>
                <label for="email">Email</label>
-               <input type="email" name="email" id="email" autocomplete="email" maxlength="245" required>
+               <input placeholder="" type="email" name="email" id="email" autocomplete="email" maxlength="245" required>
+               <span class="custom-error-message" data-help="Format: email@example.com"></span>
             </p>
             <p>
                <label for="phone">Phone</label>
-               <input type="tel" name="phone" id="phone" autocomplete="tel" maxlength="245" required>
+               <input placeholder="" type="tel" name="phone" id="phone" autocomplete="tel" pattern="[0-9\+\-]+" maxlength="245" required>
+               <span class="custom-error-message" data-help="Only numbers"></span>
             </p>
             <p>
                <label for="pwd">Password</label>
-               <input type="password" name="pwd" id="pwd" autocomplete="new-password" maxlength="245"
+               <input placeholder="" type="password" name="pwd" id="pwd" autocomplete="new-password" minlength="8" maxlength="245"
                   required>
+               <span class="custom-error-message" data-help="8-24 character"></span>
             </p>
             <p>
                <label for="pwd-confirmation">Confirm password</label>
-               <input type="password" name="pwd-confirmation" id="pwd-confirmation" autocomplete="new-password"
-                maxlength="245" required>
+               <input placeholder="" type="password" name="pwd-confirmation" id="pwd-confirmation" autocomplete="new-password"
+                  minlength="8" maxlength="245" required>
+               <span class="custom-error-message" data-help="Passwords do not match"></span>
             </p>
          </fieldset>
       </form>
