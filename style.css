@@ -159,7 +159,7 @@ form {
       border: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.2rem;
 
       legend {
          margin: 1.5rem 0;
@@ -198,12 +198,23 @@ form {
                color: var(--label-color-valid);
             }
 
-            &:user-invalid {
-               border-color: var(--bg-color-theme-strong);
+            span {
+               position: relative;
             }
 
-            label:has(+ &:user-invalid) {
-               color: var(--text-color-theme);
+            &:user-invalid {
+               border-color: var(--bg-color-theme-strong);
+
+               &+span::before {
+                  content: "* " attr(data-help);
+                  color: var(--text-color-theme);
+                  position: absolute;
+                  font-size: 0.6rem;
+               }
+
+               &:placeholder-shown:not(:focus)+span::before {
+                  display: none;
+               }
             }
 
             &:focus {
